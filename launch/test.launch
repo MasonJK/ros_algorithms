@@ -1,0 +1,7 @@
+<launch>
+    <arg name="map_file" default="$(find ros_algorithms)/map/house_test.yaml"/>
+    <!-- <node pkg="ros_algorithms" type="odometry_publisher" name="odometry_publisher" output="screen"/> -->
+    <node pkg="ros_algorithms" type="global_planner" name="global_planner" output="screen"/>
+    <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)" respawn="true"/>
+    <node pkg="rviz" name="rviz" type="rviz" args="-d $(find ros_algorithms)/rviz/path_test.rviz"/>
+</launch>
