@@ -128,7 +128,6 @@ void Dijstra::initializeMap(){
     current_node->set_gcost(0);
 }
 
-
 // Dijstra specialized
 void Dijstra::calculate(){
     while(current_node != &node_map[goal_.x_][goal_.y_]){

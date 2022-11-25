@@ -74,7 +74,6 @@ public:
     void virtual initializeMap() = 0;
 };
 
-
 GlobalPlanner::GlobalPlanner(){
     // publisher, subscriber
     path_pub = nh_.advertise<nav_msgs::Path>("/dijstra_path", 1);
@@ -99,8 +98,7 @@ void GlobalPlanner::startCallback(const nav_msgs::Odometry::ConstPtr& msg){
         // new_start_flag = true;
     }
     start_ = poseToCoordinate(msg->pose.pose);
-    initial_start_flag = 
-    true;
+    initial_start_flag = true;
 }
 
 

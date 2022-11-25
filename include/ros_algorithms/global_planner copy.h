@@ -15,6 +15,7 @@
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <ros/ros.h>
 
+// data tpye that carries (x,y) position
 class Coordinate{
 public:
     int x_;
